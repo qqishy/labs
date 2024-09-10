@@ -1,63 +1,57 @@
 ﻿#include <iostream>
 using namespace std;
+
 int main() {
-	int rows, cols;
 	struct student {
 		string surname;
 		string name;
 		int age;
 		string group;
-		string faculty;
+		int id;
 	};
 
-	student student1;
-	student1.surname = "Kuznecov";
-	student1.name = "Kirill";
-	student1.age = 19;
-	student1.group = "23vvv1";
-	student1.faculty = "fvt";
+	student mass[4];
+	mass[0].surname = "Kuznetsov";
+	mass[0].name = "Kirill";
+	mass[0].age = 19;
+	mass[0].group = "23vvv1";
+	mass[0].id = 489674;
 
-	student student2;
-	student2.surname = "Balaev";
-	student2.name = "Gleb";
-	student2.age = 52;
-	student2.group = "23vvv2";
-	student2.faculty = "fite";
+	mass[1].surname = "Mishanina";
+	mass[1].name = "Anna";
+	mass[1].age = 18;
+	mass[1].group = "23vvv2";
+	mass[1].id = 497674;
 
-	student student3;
-	student3.surname = "Belyakova";
-	student3.name = "Dariya";
-	student3.age = 16;
-	student3.group = "23vvv3";
-	student3.faculty = "fvt";
+	mass[2].surname = "Balaev";
+	mass[2].name = "Bleb";
+	mass[2].age = 52;
+	mass[2].group = "23vvv3";
+	mass[2].id = 409875;
+
+	mass[3].surname = "Belyakova";
+	mass[3].name = "Dariya";
+	mass[3].age = 16;
+	mass[3].group = "23vvv4";
+	mass[3].id = 525252;
 
 	int search;
 
-	cout << "Select search surname/name [1/2]: ";
+	cout << "select a search option surname/name/age/group/student id [1/2/3/4/5]: ";
 	cin >> search;
 
 	string target;
+	int targetInt;
 
 	if (search == 1)
 	{
 		cout << "Enter surname: ";
 		cin >> target;
 
-		if (student1.surname == target)
-		{
-			cout << "Student:\n" << student1.surname << "\n" << student1.name << "\n" << student1.age << "\n" << student1.group << "\n" << student1.faculty;
-		}
-		else if (student2.surname == target)
-		{
-			cout << "Student:\n" << student2.surname << "\n" << student2.name << "\n" << student2.age << "\n" << student2.group << "\n" << student2.faculty;
-		}
-		else if (student3.surname == target)
-		{
-			cout << "Student:\n" << student3.surname << "\n" << student3.name << "\n" << student3.age << "\n" << student3.group << "\n" << student3.faculty;
-		}
-		else if (student1.surname != target || student2.surname != target || student3.surname != target)
-		{
-			cout << "Student not found";
+		for (int i = 0; i < 4; i++) {
+			if (mass[i].surname == target) {
+				cout << "Student info: " << mass[i].surname << " " << mass[i].name << " " << mass[i].age << " " << mass[i].group << " " << mass[i].id;
+			}
 		}
 
 		return 0;
@@ -66,29 +60,64 @@ int main() {
 	{
 		cout << "Enter name: ";
 		cin >> target;
-		if (student1.name == target)
-		{
-			cout << "Student:\n" << student1.surname << "\n" << student1.name << "\n" << student1.age << "\n" << student1.group << "\n" << student1.faculty;
-		}
-		else if (student2.name == target)
-		{
-			cout << "Student:\n" << student2.surname << "\n" << student2.name << "\n" << student2.age << "\n" << student2.group << "\n" << student2.faculty;
-		}
-		else if (student3.name == target)
-		{
-			cout << "Student:\n" << student3.surname << "\n" << student3.name << "\n" << student3.age << "\n" << student3.group << "\n" << student3.faculty;
-		}
-		else if (student1.name != target || student2.name != target || student3.name != target)
-		{
-			cout << "Student not found";
+
+		for (int i = 0; i < 4; i++) {
+			if (mass[i].name == target) {
+				cout << "Student info: " << mass[i].surname << " " << mass[i].name << " " << mass[i].age << " " << mass[i].group << " " << mass[i].id;
+			}
 		}
 
 		return 0;
 	}
-	else if (search != 1 || search != 2)
+
+	else if (search == 3)
 	{
-		cout << "Enter 1 or 2, it s sposob search";
+		cout << "Enter age: ";
+		cin >> targetInt;
+
+		for (int i = 0; i < 4; i++) {
+			if (mass[i].age == targetInt) {
+				cout << "Student info: " << mass[i].surname << " " << mass[i].name << " " << mass[i].age << " " << mass[i].group << " " << mass[i].id;
+			}
+		}
+
+		return 0;
 	}
+
+	else if (search == 4)
+	{
+		cout << "Enter group: ";
+		cin >> target;
+
+		for (int i = 0; i < 4; i++) {
+			if (mass[i].group == target) {
+				cout << "Student info: " << mass[i].surname << " " << mass[i].name << " " << mass[i].age << " " << mass[i].group << " " << mass[i].id;
+			}
+		}
+
+		return 0;
+	}
+
+	else if (search == 5)
+	{
+		cout << "Enter id: ";
+		cin >> targetInt;
+
+		for (int i = 0; i < 4; i++) {
+			if (mass[i].id == targetInt) {
+				cout << "Student info: " << mass[i].surname << " " << mass[i].name << " " << mass[i].age << " " << mass[i].group << " " << mass[i].id;
+			}
+
+		}
+
+		return 0;
+	}
+
+	else if (search != 1 || search != 2 || search != 3 || search != 4 || search != 5)
+	{
+		cout << "Enter 1 - 5";
+	}
+
 
 	return 0;
 }
