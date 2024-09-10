@@ -1,3 +1,4 @@
 ﻿  lab1.cpp
-C:\Users\User\Desktop\3 семестр\labs\lab1\lab1\lab1.cpp(16,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\User\Desktop\3 семестр\labs\lab1\lab1\lab1.cpp(4,6): warning C4101: rows: неиспользованная локальная переменная
+C:\Users\User\Desktop\3 семестр\labs\lab1\lab1\lab1.cpp(4,12): warning C4101: cols: неиспользованная локальная переменная
   lab1.vcxproj -> C:\Users\User\Desktop\3 семестр\labs\lab1\x64\Debug\lab1.exe
