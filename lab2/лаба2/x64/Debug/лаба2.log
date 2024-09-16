@@ -1,0 +1,5 @@
+﻿  лаба2.cpp
+C:\Users\User\Desktop\3 семестр\лаба2\лаба2\лаба2.cpp(95,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\User\Desktop\3 семестр\лаба2\лаба2\лаба2.cpp(105,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\User\Desktop\3 семестр\лаба2\лаба2\лаба2.cpp(59,8): warning C4101: matr: неиспользованная локальная переменная
+  лаба2.vcxproj -> C:\Users\User\Desktop\3 семестр\лаба2\x64\Debug\лаба2.exe
