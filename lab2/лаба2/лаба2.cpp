@@ -55,7 +55,7 @@ int main(void)
 	clock_t start, end; // объявляем переменные для определения времени выполнения
 	
 
-	const int size = 25000;
+	const int size = 40000;
 
 	int* a = (int*)malloc(size * sizeof(int));
 
@@ -65,13 +65,13 @@ int main(void)
 	/*for (int i = 0; i < size; i++) {
 		a[i] = rand() % 100 - 1;
 	}*/
-	/*
-	for (int i = 0; i < size; i++) {
+	
+	/*for (int i = 0; i < size; i++) {
 		a[i] = i;
 	}*/
 	
-	/*
-	for (int i = 0; i < size; i++) {
+	
+	/*for (int i = 0; i < size; i++) {
 		a[i] = size - i;
 	}*/
 	
