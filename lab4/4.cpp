@@ -29,6 +29,12 @@ struct Node* CreateTree(struct Node* root, struct Node* r, int data) // созд
         return r;
     }
 
+    // Проверка на дублирование
+    if (data == r->data) {
+        printf("Элемент %d уже существует\n", data);
+        return root;
+    }
+
     if (data > r->data)
         CreateTree(r, r->left, data);
     else
