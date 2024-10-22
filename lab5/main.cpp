@@ -1,4 +1,4 @@
-п»ї#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
@@ -8,7 +8,7 @@ int main() {
 	int m = 5, Gsize = 0;
 	int** G, * deg;
 
-	printf("1.1 Р·Р°РґР°РЅРёРµ\n");
+	printf("1.1 задание\n");
 
 	G = (int**)malloc(m * sizeof(int*));
 	for (int i = 0; i < m; i++) {
@@ -36,7 +36,7 @@ int main() {
 		printf("\n");
 	}
 
-	printf("\n1.2 Р·Р°РґР°РЅРёРµ\n");
+	printf("\n1.2 задание\n");
 
 	for (int i = 0; i < m; i++) {
 		for (int j = 0; j < m; j++) {
@@ -46,9 +46,9 @@ int main() {
 		}
 	}
 	Gsize = Gsize / 2;
-	printf("Р Р°Р·РјРµСЂ РіСЂР°С„С„Р°: %d\n", Gsize);
+	printf("Размер граффа: %d\n", Gsize);
 
-	printf("\n1.3 Р·Р°РґР°РЅРёРµ\n");
+	printf("\n1.3 задание\n");
 
 	for (int i = 0; i < m; i++) {
 		for (int j = 0; j < m; j++) {
@@ -56,13 +56,13 @@ int main() {
 				deg[i]++;
 			}
 		}
-		printf("РЎС‚РµРїРµРЅСЊ РІРµСЂС€РёРЅС‹ %d = %d\n", i, deg[i]);
-		if (deg[i] == 0) printf("Р’РµСЂС€РёРЅР° %d РёР·Р°Р»РёСЂРѕРІР°РЅРЅР°СЏ\n", i + 1);
-		if (deg[i] == 1) printf("Р’РµСЂС€РёРЅР° %d РєРѕРЅС†РµРІР°СЏ\n", i + 1);
-		if (deg[i] == m) printf("Р’РµСЂС€РёРЅР° %d РґРѕРјРёРЅРёСЂСѓСЋС‰Р°СЏ\n", i + 1);
+		printf("Степень вершины %d = %d\n", i, deg[i]);
+		if (deg[i] == 0) printf("Вершина %d изалированная\n", i + 1);
+		if (deg[i] == 1) printf("Вершина %d концевая\n", i + 1);
+		if (deg[i] == m) printf("Вершина %d доминирующая\n", i + 1);
 	}
 
-	printf("\n2.1 Р·Р°РґР°РЅРёРµ");
+	printf("\n2.1 задание");
 
 	int** Ginciden, index = 0;
 
@@ -84,7 +84,7 @@ int main() {
 		}
 	}
 
-	printf("\nРњР°С‚СЂРёС†Р° РёРЅС†РёРґРµРЅС‚РЅРѕСЃС‚Рё:\n");
+	printf("\nМатрица инцидентности:\n");
 	for (int i = 0; i < m; i++) {
 		for (int j = 0; j < Gsize; j++) {
 			printf("%d ", Ginciden[i][j]);
@@ -92,7 +92,7 @@ int main() {
 		printf("\n");
 	}
 
-	printf("\n2.2 Р·Р°РґР°РЅРёРµ");
+	printf("\n2.2 задание");
 
 	int Gedge = 0;
 
@@ -108,9 +108,9 @@ int main() {
 		}
 	}
 
-	printf("\nР Р°Р·РјРµСЂ РіСЂР°С„С„Р°(РїРѕ РјР°С‚СЂРёС†Рµ РёРЅС†РёРґРµРЅС‚РЅРѕСЃС‚Рё): %d\n", Gedge);
+	printf("\nРазмер граффа(по матрице инцидентности): %d\n", Gedge);
 
-	printf("\n2.3 Р·Р°РґР°РЅРёРµ");
+	printf("\n2.3 задание");
 
 	for (int i = 0; i < m; i++) {
 		int edge = 0;
@@ -119,9 +119,9 @@ int main() {
 				edge++;
 			}
 		}
-		if (edge == 0) printf("Р’РµСЂС€РёРЅР° %d РёР·Р°Р»РёСЂРѕРІР°РЅРЅР°СЏ\n", i + 1);
-		if (edge == 1) printf("Р’РµСЂС€РёРЅР° %d РєРѕРЅС†РµРІР°СЏ\n", i + 1);
-		if (edge == Gedge) printf("Р’РµСЂС€РёРЅР° %d РґРѕРјРёРЅРёСЂСѓСЋС‰Р°СЏ\n", i + 1);
+		if (edge == 0) printf("Вершина %d изалированная\n", i + 1);
+		if (edge == 1) printf("Вершина %d концевая\n", i + 1);
+		if (edge == Gedge) printf("Вершина %d доминирующая\n", i + 1);
 	}
 
 	for (int i = 0; i < m; i++) {
