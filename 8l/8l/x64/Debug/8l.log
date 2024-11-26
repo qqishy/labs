@@ -1,0 +1,3 @@
+﻿  8l.cpp
+C:\Users\Аня\source\repos\8l\8l\8l.cpp(61,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  8l.vcxproj -> C:\Users\Аня\source\repos\8l\x64\Debug\8l.exe
